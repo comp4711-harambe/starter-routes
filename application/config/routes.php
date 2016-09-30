@@ -50,6 +50,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
+
+$route['(^comp\d+)/wisdom'] = 'wise/bingo';
 $route['lock/:any/:any'] = 'welcome/shucks';
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
