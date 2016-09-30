@@ -14,10 +14,10 @@ class Bingo extends Application
 		// gets justone view
 		$this->data['pagebody'] = 'justone';
 		// gets array id of x from the source
-		$source = $this->$quotes->get(5);
-		$this->data['mug'] = $authors['mug'];
-		$this->data['who'] = $authors['who'];
-		$this->data['what'] = $authors['what'];
+		$source = $this->quotes->get(5);
+		$this->data['mug'] = $source['mug'];
+		$this->data['who'] = $source['who'];
+		$this->data['what'] = $source['what'];
 		$this->render();
 	}
 
