@@ -40,4 +40,21 @@ class First extends Application
 		$this->data['pagebody'] = 'justone';
 		$this->render();
     }
+
+    /*
+     * Function displays a quote by an author based on the author ID.
+     */
+    public function gimmie($id) {
+		// build the author we want to pass on to our view
+		$author = $this->quotes->get($id);
+		$this->data['who'] = $author['who'];
+		$this->data['mug'] = $author['mug'];
+		$this->data['what'] = $author['what'];
+
+		// this is the view we want shown
+		$this->data['pagebody'] = 'justone';
+		$this->render();
+        
+    }
+
 }
