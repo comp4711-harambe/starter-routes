@@ -65,4 +65,4 @@ $route['dunno'] = function() {
     readfile($source);
     die();
 };
-$route['(?i)(wise)/bingo'] = 'bingo';
+$route['([a-zA-Z]{4})/bingo'] = 'bingo';
