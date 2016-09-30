@@ -56,3 +56,10 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['sleep'] = "first/zzz";
 $route['show/(:num)'] = "first/gimmie/$1";
+$route['dunno'] = function() {
+    $source = './data/noneedtobeupset.jpg';
+    header("Content-type: image/jpeg");
+    header('Content-Disposition: inline');
+    readfile($source);
+    die();
+};
