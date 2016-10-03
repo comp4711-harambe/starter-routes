@@ -10,4 +10,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 |	https://codeigniter.com/user_guide/general/hooks.html
 |
-*/
+ */
+
+$hook['display_override'] = array(
+                            'class'    => 'AsteriskHook',
+                            'function' => 'asterisk_words',
+                            'filename' => 'asterisk_hook.php',
+                            'filepath' => 'hooks',
+                            'params' => array()
+);

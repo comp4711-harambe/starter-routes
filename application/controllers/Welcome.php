@@ -29,5 +29,17 @@ class Welcome extends Application
 
 		$this->render();
 	}
+        
+        public function shucks() {
+            $lockAuthor = $this-> quotes->get(2);
+            $this->data['who'] = $lockAuthor['who'];
+            $this->data['mug'] = $lockAuthor['mug'];
+            $this->data['what'] = $lockAuthor['what'];
+            
+            //View we want shown
+            
+            $this->data['pagebody'] = 'justone';
+            $this->render();
+        }
 
 }
